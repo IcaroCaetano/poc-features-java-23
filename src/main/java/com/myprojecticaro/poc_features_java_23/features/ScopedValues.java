@@ -2,7 +2,7 @@ package com.myprojecticaro.poc_features_java_23.features;
 
 import java.util.concurrent.Executors;
 
-public class ScopedValuesExample {
+public class ScopedValues {
 
     public static final ScopedValue<String> USER = ScopedValue.newInstance();
 
