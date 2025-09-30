@@ -96,3 +96,18 @@ src/
 ````
 java --version
 ````
+
+2. Compile the project:
+
+````
+javac --enable-preview --release 23 -d out $(find src -name "*.java")
+````
+
+3. Run an example (with preview enabled):
+
+````
+
+java --enable-preview -cp out com.myprojecticaro.poc_features_java_23.features.StringTemplates
+````
+
+## ⚠️ Notes
