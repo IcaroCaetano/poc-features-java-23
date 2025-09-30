@@ -1,0 +1,27 @@
+package com.myprojecticaro.poc_features_java_23.features;
+
+import java.util.concurrent.Executors;
+
+public class ScopedValuesExample {
+
+    public static final ScopedValue<String> USER = ScopedValue.newInstance();
+
+    public static void runExample() {
+        try {
+            ScopedValue.where(USER, "icaro-123").run(() -> {
+                var executor = Executors.newSingleThreadExecutor();
+                try {
+                    executor.submit(() -> {
+                        System.out.println("Scoped value in thread: " + USER.get());
+                    }).get();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                } finally {
+                    executor.shutdownNow();
+                }
+            });
+        } catch (Throwable t) {
+            throw new RuntimeException(t);
+        }
+    }
+}
