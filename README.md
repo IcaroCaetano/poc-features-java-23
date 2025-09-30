@@ -69,4 +69,30 @@ ScopedValue.where(USER, "user-123").run(() -> {
 
 - Example:
   ````
+
+  var va = IntVector.fromArray(SPECIES, a, 0);
+  var vb = IntVector.fromArray(SPECIES, b, 0);
+  var vc = va.add(vb);
   ````
+
+## 📂 Project Structure
+
+````
+
+src/
+ └─ com/myprojecticaro/poc_features_java_23/features/
+      ├─ StringTemplates.java
+      ├─ UnnamedVariables.java
+      ├─ UnnamedPatterns.java
+      ├─ ScopedValuesExample.java
+      ├─ StreamGatherersExample.java
+      └─ VectorApiExample.java
+````
+
+## ▶️ Running the Examples
+
+1. Make sure you have JDK 23 installed.
+
+````
+java --version
+````
