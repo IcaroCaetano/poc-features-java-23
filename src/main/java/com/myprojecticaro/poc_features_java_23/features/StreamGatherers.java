@@ -1,27 +1,15 @@
 package com.myprojecticaro.poc_features_java_23.features;
 
-import java.util.concurrent.Executors;
+import java.util.stream.Stream;
+import java.util.stream.Gatherers;
 
-public class ScopedValues {
+public class StreamGatherers {
 
-    public static final ScopedValue<String> USER = ScopedValue.newInstance();
+    public static void run() {
+        var result = Stream.of(1, 2, 3, 4, 5)
+            .gather(Gatherers.windowSliding(3)) 
+            .toList();
 
-    public static void runExample() {
-        try {
-            ScopedValue.where(USER, "icaro-123").run(() -> {
-                var executor = Executors.newSingleThreadExecutor();
-                try {
-                    executor.submit(() -> {
-                        System.out.println("Scoped value in thread: " + USER.get());
-                    }).get();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                } finally {
-                    executor.shutdownNow();
-                }
-            });
-        } catch (Throwable t) {
-            throw new RuntimeException(t);
-        }
+        System.out.println("Sliding windows: " + result);
     }
 }
