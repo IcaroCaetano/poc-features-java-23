@@ -111,3 +111,27 @@ java --enable-preview -cp out com.myprojecticaro.poc_features_java_23.features.S
 ````
 
 ## ⚠️ Notes
+
+- Some features are still preview (--enable-preview flag required).
+
+- Vector API is still incubator → requires --add-modules jdk.incubator.vector.
+Example:
+
+````
+
+java --enable-preview --add-modules jdk.incubator.vector -cp out com.myprojecticaro.poc_features_java_23.features.VectorApiExample
+````
+
+## 📚 References
+
+### - JEP 459: String Templates (2nd Preview)
+
+### - JEP 456: Unnamed Variables
+
+### - JEP 457: Unnamed Patterns
+
+### - JEP 464: Scoped Values
+
+### - JEP 461: Stream Gatherers
+
+JEP 460: Vector API (6th Incubator)
