@@ -134,4 +134,4 @@ java --enable-preview --add-modules jdk.incubator.vector -cp out com.myprojectic
 
 ### - JEP 461: Stream Gatherers
 
-JEP 460: Vector API (6th Incubator)
+### - JEP 460: Vector API (6th Incubator)
