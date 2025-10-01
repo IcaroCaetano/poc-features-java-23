@@ -38,7 +38,7 @@ public class StringTemplates {
      * The sum of 10 + 20 is 30
      * </pre>
      */
-    public static void runExample() {
+    public static void run() {
         int x = 10, y = 20;
 
         // Using string templates (JEP 459)
