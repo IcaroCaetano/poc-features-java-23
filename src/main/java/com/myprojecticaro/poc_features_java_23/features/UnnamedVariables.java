@@ -33,7 +33,7 @@ public class UnnamedVariables {
      *
      * <p>For each element in the array, this method prints "Hello!" to the console.</p>
      */
-    public static void runExample() {
+    public static void run() {
         String[] names = { "Alice", "Bob", "Carol" };
 
         for (String _ : names) {
