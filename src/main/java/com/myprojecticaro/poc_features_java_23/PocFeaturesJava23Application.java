@@ -16,6 +16,6 @@ public class PocFeaturesJava23Application {
         StreamGatherers.run();
         VectorApi.run();
 
-        System.out.println("✅ Finished running Java 23 features.");
+        System.out.println("Finished running Java 23 features.");
     }
 }
